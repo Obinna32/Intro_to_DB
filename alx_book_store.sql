@@ -20,8 +20,8 @@ CREATE TABLE alx_book_store.Customers(
 
 CREATE TABLE alx_book_store.Orders(
 	order_id INT Primary Key,
-	customer_id VARCHAR(20),
-    Foreign Key(customer_id) REFERENCES Customers(customer_id),
+	customer_id INT,
+    FOREIGN KEY (customer_id) REFERENCES Customers(customer_id),
 	order_date DATE);
     
 CREATE TABLE alx_book_store.Order_Details(
