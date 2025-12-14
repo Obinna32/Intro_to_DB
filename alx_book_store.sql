@@ -24,10 +24,12 @@ CREATE TABLE alx_book_store.Orders(
     FOREIGN KEY (customer_id) REFERENCES Customers(customer_id),
 	order_date DATE);
     
+
+	["FOREIGN KEY (order_id) REFERENCES Orders(order_id)", "FOREIGN KEY (book_id) REFERENCES Books(book_id)"]
 CREATE TABLE alx_book_store.Order_Details(
 	orderdetailid VARCHAR(20) Primary Key,
 	order_id VARCHAR(20),
-    Foreign Key(order_id) references Orders(order_id),
+    FOREIGN KEY (order_id) REFERENCES Orders(order_id),
 	book_id INT(10),
-    Foreign Key(book_id) references Books (book_id),
+    FOREIGN KEY (book_id) REFERENCES Books(book_id),
 	quantity DOUBLE);
