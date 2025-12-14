@@ -19,9 +19,9 @@ CREATE TABLE alx_book_store.Customers(
 	address TEXT);
 
 CREATE TABLE alx_book_store.Orders(
-	order_id VARCHAR(20) Primary Key,
+	order_id INT Primary Key,
 	customer_id VARCHAR(20),
-    Foreign Key(customer_id) references Customers(customer_id),
+    Foreign Key(customer_id) REFERENCES Customers(customer_id),
 	order_date DATE);
     
 CREATE TABLE alx_book_store.Order_Details(
