@@ -1,5 +1,9 @@
-INSERT INTO Customer(customer_id,customer_name,email,address)
-VALUES(
+INSERT INTO CUSTOMERS (
+    CUSTOMER_ID,
+    CUSTOMER_NAME,
+    EMAIL,
+    ADDRESS
+) VALUES (
     1,
     'Cole Baidoo',
     'cbaidoo@sandtech.com',
